@@ -31,7 +31,7 @@
 
 
 
-// NTC Termistors
+// NTC Thermistors
 #define NTC_RES(adc_val) ((4095.0 * 10000.0) / adc_val - 10000.0)
 #define NTC_TEMP(adc_val) (1.0 / ((logf(NTC_RES(adc_val) / 10000.0) / PCB_NTC_BETA) + (1.0 / 298.15)) - 273.15)
 
