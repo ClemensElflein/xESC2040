@@ -4234,7 +4234,7 @@
       (net 81 "Net-(R13-Pad2)") (pinfunction "QSPI_SS_N") (pintype "unspecified") (tstamp a4b395c6-7d4f-4287-bfda-bc7258613934))
     (pad "57" smd rect (at 0 0 90) (size 3.2004 3.2004) (layers "F.Cu" "F.Mask")
       (net 2 "GND") (pinfunction "GND") (pintype "power_in") (tstamp 02c9cf10-3a69-438c-9659-060ea0f38440))
-    (model "C:/Users/4perr/Documents/openmower/kicad/3d/STEP/IC57_RP2040.step"
+    (model "${KIPRJMOD}/libs/RP2040_QFN_PACKAGE.STEP"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
