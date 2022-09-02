@@ -411,7 +411,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "xESC2.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
