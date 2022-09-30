@@ -548,7 +548,6 @@ void loop()
     break;
   case 3:
     status.temperature_pcb = readPcbTemp() * 0.001 + status.temperature_pcb * 0.999;
-    status.temperature_pcb = error_i;
     break;
 
   default:
