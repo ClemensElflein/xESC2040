@@ -30,9 +30,9 @@ struct Xesc2040StatusPacket {
     double current_input;       // input current (ampere)
     double duty_cycle;          // duty cycle (0 to 1)
     uint32_t tacho;
-    int32_t fault_code;
     uint32_t tacho_absolute;    // wheel ticks absolute
     bool direction;             // direction CW=true, CCW=false
+    int32_t fault_code;
     uint16_t crc;
 } __attribute__((packed));
 #pragma pack(pop)
