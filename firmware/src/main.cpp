@@ -56,7 +56,7 @@ volatile uint last_commutation = 0xFF;
 volatile float last_duty = 1000.0f;
 volatile uint32_t tacho = 0;
 volatile uint32_t tacho_absolute = 0; // wheel ticks absolute
-volatile bool direction;              // direction CW=true, CCW=false
+volatile bool direction;              // direction CW/CCW
 
 Xesc2040StatusPacket status = {0};
 Xesc2040SettingsPacket settings = {0};
@@ -242,15 +242,16 @@ void updateCommutation()
     int8_t diff = (last_commutation-1) - (commutation-1);
     if(diff < -3) {
       diff += 6;
-      direction = true;
     } if(diff > 3) {
       diff -= 6;
-      direction = false;
     }
     if(diff >= -3 && diff <= 3) {
       tacho += diff;
       tacho_absolute += abs(diff);
-    } else {
+      direction = diff > 0;
+    }
+    else
+    {
       internal_error = true;
     }
   }

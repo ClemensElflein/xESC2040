@@ -31,7 +31,7 @@ struct Xesc2040StatusPacket {
     double duty_cycle;          // duty cycle (0 to 1)
     uint32_t tacho;
     uint32_t tacho_absolute;    // wheel ticks absolute
-    bool direction;             // direction CW=true, CCW=false
+    bool direction;             // direction CW/CCW
     int32_t fault_code;
     uint16_t crc;
 } __attribute__((packed));
