@@ -248,7 +248,7 @@ void updateCommutation()
     if(diff >= -3 && diff <= 3) {
       tacho += diff;
       tacho_absolute += abs(diff);
-      direction = diff > 0;
+      direction = diff < 0;
     }
     else
     {
